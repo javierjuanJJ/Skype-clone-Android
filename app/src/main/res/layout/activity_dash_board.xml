@@ -12,18 +12,21 @@
         android:layout_height="280dp"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
+        android:layout_gravity="center"
         android:background="#fff"
         app:cardElevation="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:layout_gravity="center"
             android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:text="Please share this code with your friends " />
@@ -33,10 +36,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
+                android:id="@+id/etCodeInput"
+                android:background="@drawable/code_layout_design"
+                android:padding="10dp"
                 android:layout_marginRight="20dp"
                 android:textAlignment="center"
                 android:hint="Meeting code"
                 />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_design"
+                android:layout_marginTop="20dp"
+                android:text="Join meeting"
+                android:id="@+id/btnJoin"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
         </LinearLayout>
 
 
