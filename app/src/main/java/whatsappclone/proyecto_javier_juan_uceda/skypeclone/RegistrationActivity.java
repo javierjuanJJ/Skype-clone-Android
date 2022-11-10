@@ -83,6 +83,8 @@ public class RegistrationActivity extends AppCompatActivity {
                                 public void onFailure(@NonNull Exception e) {
                                     progressDialog.dismiss();
                                     Toast.makeText(RegistrationActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                                    Log.e("RegistrationActivity","Firebase registration error:" + e.getMessage());
+                                    e.printStackTrace();
                                     Timber.tag(RegistrationActivity.class.getSimpleName()).e("Firebase registration error: %s", e.getMessage());
                                 }
                             });
@@ -93,6 +95,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         progressDialog.dismiss();
+                        Log.e("RegistrationActivity","Firebase registration error:" + e.getMessage());
                         Toast.makeText(RegistrationActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
                         Timber.tag(RegistrationActivity.class.getSimpleName()).e("Firebase registration error: " + e.getMessage());
 
